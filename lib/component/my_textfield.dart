@@ -16,10 +16,14 @@ class MyTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       controller: txtController,
-      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+      //inputFormatters: [FilteringTextInputFormatter.digitsOnly],
       decoration: InputDecoration( 
       hint: Text(myHint),
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(radius)),
+      focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(radius),
+          borderSide: const BorderSide(color: Color.fromARGB(255, 168, 197, 221), width: 2),
+        ),
       ),
     );
   }

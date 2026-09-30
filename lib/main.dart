@@ -2,6 +2,7 @@ import 'package:belajarflutter/kalkulator_page.dart';
 import 'package:belajarflutter/login_page.dart';
 import 'package:belajarflutter/login_clone.dart';
 import 'package:belajarflutter/pages/login_clone_page.dart';
+import 'package:belajarflutter/route.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: KalkulatorPage(),
+      title: "Belajar Flutter ",
+      initialRoute: Routes.registration,
+      getPages: Routes.myPages,
     );
   }
 }

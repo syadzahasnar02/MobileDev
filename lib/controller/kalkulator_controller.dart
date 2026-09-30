@@ -18,7 +18,7 @@ class KalkulatorController extends GetxController {
   void tambah(String angka1, String angka2) {
     if (!_validasiInput(angka1, angka2)) return;
 
-    double hasilTambah = double.parse(angka1) + double.parse(angka2);
+    double hasilTambah = double.parse(angka1) + double.parse(angka2); 
     hasilHitung.value = hasilTambah;
     Get.snackbar(
       "Hasil Penjumlahan",
