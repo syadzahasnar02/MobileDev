@@ -19,6 +19,7 @@ class MyTextField extends StatelessWidget {
       //inputFormatters: [FilteringTextInputFormatter.digitsOnly],
       decoration: InputDecoration( 
       hint: Text(myHint),
+      
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(radius)),
       focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(radius),
