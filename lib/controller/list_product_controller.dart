@@ -26,7 +26,8 @@ class ListProductController extends GetxController {
       harga: "Rp4.500.000",
       deskripsi: "Krim pelembap mewah dengan Miracle Broth untuk kulit tampak halus dan kenyal.",
       image: "https://i.pinimg.com/736x/ab/44/be/ab44bee2c63eeeec4817c52adb5e962f.jpg",
-      review: "Teksturnya kaya, kulit terasa lembut dan terhidrasi sepanjang hari.",
+      review:
+          "Teksturnya kaya, kulit terasa lembut dan terhidrasi sepanjang hari.",
       rating: "4.6",
       namaToko: "Sephora",
     ),

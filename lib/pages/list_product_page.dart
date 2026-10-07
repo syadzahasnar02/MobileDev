@@ -1,5 +1,6 @@
 import 'package:belajarflutter/controller/list_product_controller.dart';
 import 'package:belajarflutter/pages/list_detail_product_page.dart';
+import 'package:belajarflutter/route.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -36,7 +37,18 @@ class ListProductPage extends StatelessWidget {
 
             child: InkWell(
               onTap: () {
-                Get.to(() => ListDetailProductPage(produk: produk));
+                Get.toNamed(
+                Routes.listDetailProduk,
+                arguments: {
+                    'namaProduk': produk.namaProduk,
+                    'harga': produk.harga,
+                    'deskripsi': produk.deskripsi,
+                    'image': produk.image,
+                    'rating': produk.rating,
+                    'review': produk.review,
+                    'namaToko': produk.namaToko,
+                  },
+              );
               },
               child: Padding(
                 padding: const EdgeInsets.all(12),
