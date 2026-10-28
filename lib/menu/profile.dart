@@ -12,7 +12,6 @@ class ProfilePage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(12),
         children: [
-          // Header: foto, nama, email
           Card(
             color: const Color.fromARGB(255, 255, 251, 251),
             margin: const EdgeInsets.only(bottom: 8),
@@ -246,7 +245,6 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
 
-          // Tombol keluar
           Padding(
             padding: const EdgeInsets.only(top: 8),
             child: OutlinedButton.icon(
