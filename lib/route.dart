@@ -1,5 +1,6 @@
 import 'package:belajarflutter/pages/confirm_registration_page.dart';
 import 'package:belajarflutter/pages/list_detail_product_page.dart';
+import 'package:belajarflutter/pages/main_menu_page.dart';
 import 'package:belajarflutter/pages/registration_page.dart';
 import 'package:belajarflutter/pages/list_product_page.dart';
 import 'package:get/get.dart';
@@ -9,11 +10,13 @@ class Routes {
   static const String confirmRegistration = "/confirmRegistration";
   static const String listProduk = "/listProduk";
   static const String listDetailProduk = "/listDetailProduk";
+  static const String mainMenuPage = "/mainMenuPage";
 
   static final myPages = [
-    GetPage(name: registration, page: ()=> RegistrationPage()),
-    GetPage(name: confirmRegistration, page: ()=> ConfirmRegistrationPage()),
-    GetPage(name: listProduk, page: ()=> ListProductPage()),
-    GetPage(name: listDetailProduk, page: ()=> ListDetailProductPage()),
+    GetPage(name: registration, page: () => RegistrationPage()),
+    GetPage(name: confirmRegistration, page: () => ConfirmRegistrationPage()),
+    GetPage(name: listProduk, page: () => ListProductPage()),
+    GetPage(name: listDetailProduk, page: () => ListDetailProductPage()),
+    GetPage(name: mainMenuPage, page: () => MainMenuPage()),
   ];
 }
