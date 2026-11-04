@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:belajarflutter/pages/menu_drawer_page.dart';
+import 'package:belajarflutter/route.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
@@ -30,7 +31,7 @@ class LoginCloneFixController extends GetxController {
           final data = jsonDecode(response.body);
           if(data['status'] == true){
             Get.snackbar("Berhasil", data['message']);
-            Get.off(() => MenuDrawerPage());
+            Get.off(Routes.menuDrawerPage);
           }else{
             Get.snackbar("Gagal", data['message']);
           }
