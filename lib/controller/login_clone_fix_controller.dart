@@ -31,7 +31,7 @@ class LoginCloneFixController extends GetxController {
           final data = jsonDecode(response.body);
           if(data['status'] == true){
             Get.snackbar("Berhasil", data['message']);
-            Get.off(Routes.menuDrawerPage);
+            Get.offNamed(Routes.menuDrawerPage);
           }else{
             Get.snackbar("Gagal", data['message']);
           }
