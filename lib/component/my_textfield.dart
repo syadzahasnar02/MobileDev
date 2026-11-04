@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class MyTextField extends StatelessWidget {
-  //list variabel parameter yg digunakan
+class MyTextField extends StatelessWidget {  
   final String myHint;
   final TextEditingController txtController;
   final double radius;

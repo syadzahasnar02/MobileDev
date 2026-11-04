@@ -20,7 +20,6 @@ class _LoginPageState extends State<LoginPage> {
 
           SizedBox(height: 80),
 
-          // Judul
           Text(
             "Log in",
             style: TextStyle(
@@ -31,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
 
           SizedBox(height: 30),
 
-          // Username
+          
           Container(
             margin: EdgeInsets.all(10),
             child: Column(
@@ -108,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
 
           SizedBox(height: 30),
 
-          // Login Button
+          
           Container(
             width: 430,
             height: 65,

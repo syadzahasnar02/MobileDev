@@ -1,4 +1,5 @@
 import 'package:belajarflutter/controller/main_menu_controller.dart';
+import 'package:belajarflutter/controller/menu_drawer_controller.dart';
 import 'package:belajarflutter/menu/history.dart';
 import 'package:belajarflutter/menu/home.dart';
 import 'package:belajarflutter/menu/profile.dart';
@@ -8,17 +9,17 @@ import 'package:get/get.dart';
 class MenuDrawerPage extends StatelessWidget {
   MenuDrawerPage({super.key});
 
-  final menuController = Get.put(MainMenuController());
+  final menuDrawerController = Get.put(MenuDrawerController());
 
   @override
   Widget build(BuildContext context) {
     return Obx(() => Scaffold(
       appBar: AppBar(
-        title: const Text('Menu Apps'),
+        title: const Text('Sephora'),
       ),
       body: IndexedStack(
-        index: menuController.selectedIndex.value, 
-        children: menuController.listPages,
+        index: menuDrawerController.selectedIndex.value, 
+        children: menuDrawerController.listPages,
       ),
       drawer: Drawer(
         child: ListView(
@@ -26,7 +27,7 @@ class MenuDrawerPage extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Colors.pink,
               ),
               child: Text(
                 'Navigation',
@@ -36,27 +37,27 @@ class MenuDrawerPage extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.home_filled),
               title: const Text("Home"),
-              selected: menuController.selectedIndex.value == 0,
+              selected: menuDrawerController.selectedIndex.value == 0,
               onTap: () {
-                menuController.changePage(0);
+                menuDrawerController.changePage(0);
                 Get.back();
               },
             ),
             ListTile(
               leading: const Icon(Icons.history_rounded),
               title: const Text("History"),
-              selected: menuController.selectedIndex.value == 1,
+              selected: menuDrawerController.selectedIndex.value == 1,
               onTap: () {
-                menuController.changePage(1);
+                menuDrawerController.changePage(1);
                 Get.back(); 
               },
             ),
             ListTile(
               leading: const Icon(Icons.person_rounded),
               title: const Text("Profile"),
-              selected: menuController.selectedIndex.value == 2,
+              selected: menuDrawerController.selectedIndex.value == 2,
               onTap: () {
-                menuController.changePage(2);
+                menuDrawerController.changePage(2);
                 Get.back(); 
               },
             ),

@@ -4,7 +4,7 @@ import 'package:belajarflutter/menu/home.dart';
 import 'package:belajarflutter/menu/history.dart';
 import 'package:belajarflutter/menu/profile.dart';
 
-class MainMenuController extends GetxController {
+class MenuDrawerController extends GetxController {
   var selectedIndex = 0.obs;
 
   final List<Widget> listPages = [

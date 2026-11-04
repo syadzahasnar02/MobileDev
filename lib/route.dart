@@ -3,6 +3,7 @@ import 'package:belajarflutter/menu/home.dart';
 import 'package:belajarflutter/menu/profile.dart';
 import 'package:belajarflutter/pages/confirm_registration_page.dart';
 import 'package:belajarflutter/pages/list_detail_product_page.dart';
+import 'package:belajarflutter/pages/login_clone_fix_page.dart';
 import 'package:belajarflutter/pages/main_menu_page.dart';
 import 'package:belajarflutter/pages/menu_drawer_page.dart';
 import 'package:belajarflutter/pages/registration_page.dart';
@@ -19,6 +20,7 @@ class Routes {
   static const String historyPage = "/historyPage";
   static const String profilePage = "/profilePage";
   static const String menuDrawerPage = "/menuDrawerPage";
+  static const String loginCloneFix = "/loginCloneFix";
 
   static final myPages = [
     GetPage(name: registration, page: () => RegistrationPage()),
@@ -29,5 +31,6 @@ class Routes {
     GetPage(name: historyPage, page: () => HistoryPage()),
     GetPage(name: profilePage, page: () => ProfilePage()),
     GetPage(name: menuDrawerPage, page: () => MenuDrawerPage()),
+    GetPage(name: loginCloneFix, page: () => LoginCloneFix()),
   ];
 }
