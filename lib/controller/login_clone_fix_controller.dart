@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:belajarflutter/models/login_model.dart';
 import 'package:belajarflutter/pages/menu_drawer_page.dart';
 import 'package:belajarflutter/route.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,8 @@ class LoginCloneFixController extends GetxController {
   TextEditingController txtPassword = TextEditingController();
 
   var isLoading = false.obs;
+
+  var loginModel = Rxn<LoginModel>();
 
   void login() async {
     if (txtUsername.text.toString().isEmpty ||
@@ -28,12 +31,12 @@ class LoginCloneFixController extends GetxController {
 
         isLoading.value = false;
         if (response.statusCode == 200) {
-          final data = jsonDecode(response.body);
-          if(data['status'] == true){
-            Get.snackbar("Berhasil", data['message']);
+          loginModel.value = loginModelFromJson(response.body);
+          if(loginModel.value?.status == true){
+            Get.snackbar("Berhasil", loginModel.value!.message.toString());
             Get.offNamed(Routes.menuDrawerPage);
           }else{
-            Get.snackbar("Gagal", data['message']);
+            Get.snackbar("Gagal", loginModel.value!.message.toString());
           }
         }else{
           Get.snackbar("Gagal", "Check Internet Connection");
